@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>ラジオボタン</title>
-  <link href="../../css/style.css" rel="stylesheet");
+  <link href="../../css/style.css" rel="stylesheet">
 </head>
 <body>
   <div>
@@ -17,7 +17,7 @@
     }
 
     $_POST = es($_POST);
-     ?>
+    ?>
 
      <?php
      $error = [];

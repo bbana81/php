@@ -1,5 +1,5 @@
 <?php
-//require_once("../../lib/util.php");
+require_once("../../lib/util.php");
 ?>
 
 <!DOCTYPE html>
@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SplFileObjectでファイルを読み込む</title>
+    <link href="../../css/style.css" rel="stylesheet">
 </head>
 <body>
     <div>
@@ -22,7 +23,7 @@
         
         $readdata = $fileObj->fread($fileObj->getSize());
         if (!($readdata === FALSE)) {
-            //$readdata = es($readdata);
+            $readdata = es($readdata);
             $readdata_br = nl2br($readdata,false);
             echo "{$filename}を読み込みました。","<br>";
             echo $readdata_br,"<hr>";
