@@ -12,4 +12,12 @@ function cken(array $data){
     }
     return $result;
 }
+
+function es($data, $charset = 'UTF-8'){
+    if(is_array($data)){
+        return array_map(__METHOD__, $data);
+    }else{
+        return htmlspecialchars($data, ENT_QUOTES, $charset);
+    }
+}
 ?>
