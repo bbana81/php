@@ -15,7 +15,7 @@
         <form method="POST" action="write_memofile.php">
             <ul>
                 <li><label>memo:<input name="memo" class="memofield" placeholder="メモ書く"></input></label></li>
-                <li></li>
+                <li><input type="submit" value="送信する"></li>
             </ul>
         </form>
     </div>
