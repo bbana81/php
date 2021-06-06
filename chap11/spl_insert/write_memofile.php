@@ -6,7 +6,7 @@
         exit();
     }
     $memo = $_POST["memo"];
-    $date = date("Y/n/j G:I:s", time());
+    $date = date("Y/n/j G:i:s", time());
     $newdata = $date." ".$memo;
     try{
         $workingfileObj = new SplFileObject("working.tmp", "wb");
@@ -23,8 +23,8 @@
     if (file_exists($filename)){
         $fileObj = new SplFileObject($filename,"rb");
         $fileObj ->flock(LOCK_SH);
-        $olddata = $fileObj->fread($fileObj->getSiza());
-        $fileObj->flock(LOCK_UN);
+        $olddata = $fileObj->fread($fileObj->getSize());
+        $fileObj ->flock(LOCK_UN);
 
         $olddata = "\n".$olddata;
         $workingfileObj->flock(LOCK_EX);
