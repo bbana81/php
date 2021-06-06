@@ -18,6 +18,7 @@
                 <li><input type="submit" value="送信する"></li>
             </ul>
         </form>
+        
     </div>
 </body>
 </html>
