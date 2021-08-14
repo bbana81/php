@@ -20,7 +20,7 @@ EOD;
         <?php
         $filename = "mytext.txt";
         try{
-            $fileObj = new SplFileObject($filename, "wb");
+            $fileObj = new SplFileObject($filename, "ab");
         }catch(Exception $e) {
             echo '<span class ="error">エラーがありました。</span><br>';
             echo $e->getMessage();
